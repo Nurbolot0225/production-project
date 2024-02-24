@@ -1,3 +1,3 @@
 import { some } from './test';
 
-some(123)
+some(12345)
