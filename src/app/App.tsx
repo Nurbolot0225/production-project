@@ -1,9 +1,9 @@
 import React, {Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
-import {AboutPageAsync} from './pages/AboutPage/AboutPage.async';
-import {MainPageAsync} from './pages/MainPage/MainPage.async';
-import {useTheme} from './theme/useTheme';
-import {classNames} from './helpers/classNames/classNames';
+import {useTheme} from 'app/providers/ThemeProvider';
+import {classNames} from 'shared/lib/classNames/classNames';
+import {AboutPage} from 'pages/AboutPage';
+import {MainPage} from 'pages/MainPage';
 import './styles/index.scss'
 
 
@@ -19,11 +19,11 @@ const App = () => {
                 <Routes>
                     <Route
                         path={'/'}
-                        element={<MainPageAsync />}
+                        element={<MainPage />}
                     />
                     <Route
                         path={'/about'}
-                        element={<AboutPageAsync />}
+                        element={<AboutPage />}
                     />
                 </Routes>
             </Suspense>

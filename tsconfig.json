@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./build/",
+    "outDir": "./dist/",
     // Подсвечивает все места где не указан тип
     // Однако это не означает, что теперь вовсе нельзя использовать any.
     // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
@@ -13,7 +13,10 @@
     "allowJs": true,
     "moduleResolution": "node",
     // Для обсолютного импорта
-    // "baseUrl": ".",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js
     // import Moment from 'moment';
