@@ -25,9 +25,36 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "import"
     ],
     "rules": {
+        'sort-imports': ['error', {ignoreCase: true, ignoreDeclarationSort: true}],
+        'import/order': [
+            'error',
+            {
+                groups: [
+                    ['external', 'builtin'], 'internal', ['sibling']
+                ],
+                pathGroups: [
+                    {
+                        pattern: 'react',
+                        group: 'external',
+                        position: 'before',
+                    },
+                    {
+                        pattern: '@src/**',
+                        group: 'internal',
+                    },
+                ],
+                pathGroupsExcludedImportTypes: ['internal', 'react'],
+                'newlines-between': 'always',
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: true,
+                },
+            },
+        ],
         "react/jsx-indent": [2, 4],
         "react/jsx-indent-props": [2, 4],
         "indent": [2, 4],
@@ -37,7 +64,7 @@ module.exports = {
         "no-unused-vars": "warn",
         "react/require-default-props": "off",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": "warn",
+        "react/jsx-props-no-spreading": "off",
         "react/function-component-definition": "off",
         "no-shadow": "off",
         "import/extensions": "off",

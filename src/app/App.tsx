@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react'
+
 import { AppRouter } from 'app/providers/router'
-import { Navbar } from 'widgets/Navbar'
 import { useTheme } from 'app/providers/ThemeProvider'
-import { Sidebar } from 'widgets/Sidebar'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
 import './styles/index.scss'
 
 const App = () => {
