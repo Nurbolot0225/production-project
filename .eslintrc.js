@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:i18next/recommended",
     ],
     "overrides": [
         {
@@ -26,7 +27,8 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "import"
+        "import",
+        "i18next",
     ],
     "rules": {
         'sort-imports': ['error', {ignoreCase: true, ignoreDeclarationSort: true}],
@@ -77,6 +79,7 @@ module.exports = {
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/naming-convention": "off",
         "react/no-deprecated": "off",
+        "i18next/no-literal-string": ['error', { markupOnly: true }],
     },
     "globals": {
         "__IS_DEV__": true,
