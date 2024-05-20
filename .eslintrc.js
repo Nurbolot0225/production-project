@@ -73,6 +73,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
+        'unused-imports/no-unused-imports': 'error',
         'no-console': 'warn',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
@@ -89,7 +90,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/naming-convention': 'off',
         'react/no-deprecated': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': ['error', { markupOnly: true }]
     },
     globals: {
         __IS_DEV__: true
