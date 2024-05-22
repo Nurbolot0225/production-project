@@ -25,7 +25,8 @@ module.exports = {
     ],
     parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: 'module'
+        sourceType: 'module',
+        tsconfigRootDir: __dirname
     },
     plugins: [
         'react',
@@ -73,7 +74,6 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
-        'unused-imports/no-unused-imports': 'error',
         'no-console': 'warn',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
