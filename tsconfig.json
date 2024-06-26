@@ -38,7 +38,12 @@
       "module": "CommonJS"
     }
   },
-  "includes": [
-    "./config/jest/setupTests.ts"
+  "include": [
+    "webpack.config.ts",
+    "config/jest/jestEmptyComponent.tsx",
+    "config/jest/jest.config.ts",
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ]
 }

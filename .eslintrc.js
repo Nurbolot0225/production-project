@@ -21,6 +21,12 @@ module.exports = {
             parserOptions: {
                 sourceType: 'script'
             }
+        },
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off'
+            }
         }
     ],
     parserOptions: {
@@ -73,7 +79,6 @@ module.exports = {
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'no-unused-vars': 'warn',
         'no-console': 'warn',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
@@ -83,14 +88,33 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
+        'react/no-deprecated': 'off',
         '@typescript-eslint/indent': 'off',
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/strict-boolean-expressions': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/naming-convention': 'off',
-        'react/no-deprecated': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }]
+        '@typescript-eslint/array-type': 'error',
+        '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
+        '@typescript-eslint/no-unused-vars': [
+            'error',
+            {
+                args: 'all',
+                argsIgnorePattern: '^_',
+                caughtErrors: 'all',
+                caughtErrorsIgnorePattern: '^_',
+                destructuredArrayIgnorePattern: '^_',
+                varsIgnorePattern: '^_',
+                ignoreRestSiblings: true
+            }
+        ],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true, ignoreAttribute: ['data-testid', 'to']
+            }
+        ]
     },
     globals: {
         __IS_DEV__: true
