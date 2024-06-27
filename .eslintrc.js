@@ -37,7 +37,8 @@ module.exports = {
     plugins: [
         'react',
         'import',
-        'i18next'
+        'i18next',
+        'react-hooks'
     ],
     rules: {
         'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
@@ -96,6 +97,9 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/array-type': 'error',
+        '@typescript-eslint/no-confusing-void-expression': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
         '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
         '@typescript-eslint/no-unused-vars': [
             'error',
