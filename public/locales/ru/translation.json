@@ -9,5 +9,7 @@
   "Обновить страницу": "Обновить страницу",
   "Короткий язык": "Ru",
   "Войти": "Войти",
-  "Lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quos."
+  "Lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quos.",
+  "increment": "увеличение",
+  "decrement": "уменьшение"
 }

@@ -1,6 +1,12 @@
 {
   "Loading": "Loading",
-  "Lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Eum, quos": {
+      "": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quos."
+    }
+  },
+  "decrement": "decrement",
+  "increment": "increment",
   "toggle": "toggle",
   "Войти": "Войти",
   "Главная": "Главная",
@@ -9,5 +15,5 @@
   "Обновить страницу": "Обновить страницу",
   "Произошло непредвиденное ошибка": "Произошло непредвиденное ошибка",
   "Страница не найдено": "Страница не найдено",
-  "Язык": "Русский"
+  "Язык": "Язык"
 }
