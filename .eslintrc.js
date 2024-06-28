@@ -90,6 +90,8 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'react/no-deprecated': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
         '@typescript-eslint/indent': 'off',
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/strict-boolean-expressions': 'off',
@@ -98,8 +100,7 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/array-type': 'error',
         '@typescript-eslint/no-confusing-void-expression': 'off',
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'error',
+        // '@typescript-eslint/consistent-type-imports': 'off',
         '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
         '@typescript-eslint/no-unused-vars': [
             'error',
