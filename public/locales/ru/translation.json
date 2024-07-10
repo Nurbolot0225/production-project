@@ -11,5 +11,7 @@
   "Войти": "Войти",
   "Lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quos.",
   "increment": "увеличение",
-  "decrement": "уменьшение"
+  "decrement": "уменьшение",
+  "Введите логин": "Введите логин",
+  "Введите пароль": "Введите пароль"
 }

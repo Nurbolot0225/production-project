@@ -11,5 +11,7 @@
   "Войти": "Sign in",
   "Lorem": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quos.",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Введите логин": "Enter your username",
+  "Введите пароль": "Enter the password"
 }
