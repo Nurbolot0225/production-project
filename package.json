@@ -12,8 +12,7 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
-    "test:unit": "jest --config ./config/jest/jest.config.ts",
-    "prepare": "husky install"
+    "test:unit": "jest --config ./config/jest/jest.config.ts"
   },
   "author": "",
   "license": "ISC",
