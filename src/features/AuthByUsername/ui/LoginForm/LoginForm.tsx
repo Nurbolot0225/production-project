@@ -1,9 +1,10 @@
 import { memo, useCallback } from 'react'
 
 import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
@@ -19,15 +20,16 @@ import { loginActions, loginReducer } from '../../model/slice/loginSlice'
 
 export interface LoginFormProps {
     className?: string
+    onSuccess: () => void
 }
 
 const initialReducers: ReducerList = {
     loginForm: loginReducer
 }
 
-const LoginForm = ({ className }: LoginFormProps) => {
+const LoginForm = ({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation()
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const username = useSelector(getLoginUsername)
     const password = useSelector(getLoginPassword)
     const isLoading = useSelector(getLoginIsLoading)
@@ -41,9 +43,12 @@ const LoginForm = ({ className }: LoginFormProps) => {
         dispatch(loginActions.setPassword(value))
     }, [dispatch])
 
-    const onLoginClick = useCallback(() => {
-        dispatch(loginByUsername({ username, password }))
-    }, [dispatch, username, password])
+    const onLoginClick = useCallback(async () => {
+        const resultAction = await dispatch(loginByUsername({ username, password }))
+        if (resultAction.meta.requestStatus === 'fulfilled') {
+            onSuccess()
+        }
+    }, [dispatch, username, password, onSuccess])
 
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
@@ -70,6 +75,7 @@ const LoginForm = ({ className }: LoginFormProps) => {
                     disabled={isLoading}
                     className={cls.loginBtn}
                     theme={ButtonTheme.OUTLINE}
+                    // eslint-disable-next-line
                     onClick={onLoginClick}
                 >
                     {t('Войти')}

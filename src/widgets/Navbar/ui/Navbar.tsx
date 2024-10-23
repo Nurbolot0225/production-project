@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { memo, useCallback, useState } from 'react'
 
 import { getUserAuthData, userActions } from 'entities/User'
 import { LoginModal } from 'features/AuthByUsername'
@@ -13,7 +13,7 @@ interface NavbarProps {
     className?: string
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation()
     const dispatch = useDispatch()
     const authData = useSelector(getUserAuthData)
@@ -62,4 +62,4 @@ export const Navbar = ({ className }: NavbarProps) => {
             )}
         </div>
     )
-}
+})

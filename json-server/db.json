@@ -14,5 +14,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Нурболот",
+    "lastName": "Бердибеков",
+    "age": 22,
+    "currency": "KGZ",
+    "city": "Bishkek",
+    "country": "KYRGYZSTAN",
+    "username": "admin",
+    "avatar": "https://avatars.mds.yandex.net/get-yapic/59871/bHCSz9zvORbpcEBrMUdMwJmEvs-1/islands-retina-middle"
+  }
 }
