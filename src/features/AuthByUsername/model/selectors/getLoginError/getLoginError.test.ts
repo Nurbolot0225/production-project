@@ -1,11 +1,11 @@
-import { type DeepPartial } from '@reduxjs/toolkit'
 import { type StateSchema } from 'app/providers/StoreProvider'
 
 import { getLoginError } from './getLoginError'
 
 describe('getLoginError.test', () => {
-    test('should return an error if the user does not exist', () => {
+    test('should return error', () => {
         const state: DeepPartial<StateSchema> = {
+            // @ts-expect-error
             loginForm: {
                 error: 'error'
             }
@@ -13,6 +13,7 @@ describe('getLoginError.test', () => {
         expect(getLoginError(state as StateSchema)).toEqual('error')
     })
     test('should work with empty state', () => {
+        // @ts-expect-error
         const state: DeepPartial<StateSchema> = {}
         expect(getLoginError(state as StateSchema)).toEqual(undefined)
     })

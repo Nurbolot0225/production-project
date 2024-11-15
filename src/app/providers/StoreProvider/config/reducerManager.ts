@@ -1,11 +1,13 @@
-import { type AnyAction, combineReducers, type Reducer, type ReducersMapObject } from '@reduxjs/toolkit'
+import {
+    type AnyAction, combineReducers, type Reducer, type ReducersMapObject
+} from '@reduxjs/toolkit'
 
 import { type ReducerManager, type StateSchema, type StateSchemaKey } from './StateSchema'
 
 export function createReducerManager (initialReducers: ReducersMapObject<StateSchema>): ReducerManager {
     const reducers = { ...initialReducers }
 
-    let combinedReducers = combineReducers(reducers)
+    let combinedReducer = combineReducers(reducers)
 
     let keysToRemove: StateSchemaKey[] = []
 
@@ -14,13 +16,12 @@ export function createReducerManager (initialReducers: ReducersMapObject<StateSc
         reduce: (state: StateSchema, action: AnyAction) => {
             if (keysToRemove.length > 0) {
                 state = { ...state }
-                keysToRemove.forEach(key => {
-                    // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+                keysToRemove.forEach((key) => {
                     delete state[key]
                 })
                 keysToRemove = []
             }
-            return combinedReducers(state, action)
+            return combinedReducer(state, action)
         },
         add: (key: StateSchemaKey, reducer: Reducer) => {
             if (!key || reducers[key]) {
@@ -28,16 +29,15 @@ export function createReducerManager (initialReducers: ReducersMapObject<StateSc
             }
             reducers[key] = reducer
 
-            combinedReducers = combineReducers(reducers)
+            combinedReducer = combineReducers(reducers)
         },
         remove: (key: StateSchemaKey) => {
             if (!key || !reducers[key]) {
                 return
             }
-            // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
             delete reducers[key]
             keysToRemove.push(key)
-            combinedReducers = combineReducers(reducers)
+            combinedReducer = combineReducers(reducers)
         }
     }
 }

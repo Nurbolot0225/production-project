@@ -1,6 +1,5 @@
 import { type ReactNode } from 'react'
 
-import { type DeepPartial } from '@reduxjs/toolkit'
 import { render } from '@testing-library/react'
 import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider'
 import { I18nextProvider } from 'react-i18next'
@@ -12,20 +11,19 @@ export interface componentRenderOptions {
     initialState?: DeepPartial<StateSchema>
 }
 
-export function componentRender (
-    component: ReactNode, options: componentRenderOptions = {}
-): ReactNode {
+export function componentRender (component: ReactNode, options: componentRenderOptions = {}) {
     const {
         route = '/',
         initialState
     } = options
+
     return render(
-        <StoreProvider initialState={initialState}>
-            <MemoryRouter initialEntries={[route]}>
+        <MemoryRouter initialEntries={[route]}>
+            <StoreProvider initialState={initialState}>
                 <I18nextProvider i18n={i18nForTests}>
                     {component}
                 </I18nextProvider>
-            </MemoryRouter>
-        </StoreProvider>
+            </StoreProvider>
+        </MemoryRouter>
     )
 }

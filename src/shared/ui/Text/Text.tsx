@@ -1,6 +1,7 @@
 import { memo } from 'react'
 
 import { classNames } from 'shared/lib/classNames/classNames'
+import { AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 
 import cls from './Text.module.scss'
 
@@ -21,7 +22,7 @@ export const Text = memo((props: TextProps) => {
         className,
         title,
         text,
-        theme
+        theme = AppLinkTheme.PRIMARY
     } = props
 
     return (

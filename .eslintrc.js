@@ -77,6 +77,7 @@ module.exports = {
                 ignoreComments: true
             }
         ],
+        'no-undef': 'off',
         'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -102,6 +103,9 @@ module.exports = {
         '@typescript-eslint/array-type': 'error',
         '@typescript-eslint/no-confusing-void-expression': 'off',
         // '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/no-dynamic-delete': 'off',
+        '@typescript-eslint/no-invalid-void-type': 'off',
         '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
         '@typescript-eslint/no-unused-vars': [
             'error',

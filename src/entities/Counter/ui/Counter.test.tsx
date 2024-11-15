@@ -6,12 +6,14 @@ import { Counter } from './Counter'
 describe('Counter', () => {
     test('counter render', () => {
         componentRender(<Counter />, {
+            // @ts-expect-error
             initialState: { counter: { value: 10 } }
         })
         expect(screen.getByTestId('value-title')).toHaveTextContent('10')
     })
     test('increment', () => {
         componentRender(<Counter />, {
+            // @ts-expect-error
             initialState: { counter: { value: 10 } }
         })
         fireEvent.click(screen.getByTestId('increment-btn'))
@@ -19,6 +21,7 @@ describe('Counter', () => {
     })
     test('decrement', () => {
         componentRender(<Counter />, {
+            // @ts-expect-error
             initialState: { counter: { value: 10 } }
         })
         fireEvent.click(screen.getByTestId('decrement-btn'))
