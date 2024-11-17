@@ -1,11 +1,27 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
   ],
   "users": [
     {
@@ -20,8 +36,9 @@
     "age": 22,
     "currency": "KGZ",
     "city": "Bishkek",
-    "country": "KYRGYZSTAN",
+    "country": "Kyrgyzstan",
     "username": "admin",
-    "avatar": "https://avatars.mds.yandex.net/get-yapic/59871/bHCSz9zvORbpcEBrMUdMwJmEvs-1/islands-retina-middle"
+    "avatar": "https://yt3.googleusercontent.com/lAXiyjy8X-nGurf3PQORso2mKYuG9SQzGpJ7vcLHsMP5ycRMQmExg7oQ8y75kRGAbtmKoMMK=s900-c-k-c0x00ffffff-no-rj",
+    "lastname": "Berdibekov"
   }
 }

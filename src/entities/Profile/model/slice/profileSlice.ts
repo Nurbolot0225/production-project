@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { fetchProfileData, type Profile } from 'entities/Profile'
+import { fetchProfileData, type Profile, updateProfileData } from 'entities/Profile'
 
 import { type ProfileSchema } from '../types/Profile'
 
@@ -13,7 +13,21 @@ const initialState: ProfileSchema = {
 export const profileSlice = createSlice({
     name: 'profile',
     initialState,
-    reducers: {},
+    reducers: {
+        setReadOnly: (state, action: PayloadAction<boolean>) => {
+            state.readonly = action.payload
+        },
+        cancelEdit: (state) => {
+            state.readonly = true
+            state.form = state.data
+        },
+        updateProfile: (state, action: PayloadAction<Profile>) => {
+            state.form = {
+                ...state.form,
+                ...action.payload
+            }
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchProfileData.pending, (state) => {
@@ -23,8 +37,23 @@ export const profileSlice = createSlice({
             .addCase(fetchProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
                 state.isLoading = false
                 state.data = action.payload
+                state.form = action.payload
             })
             .addCase(fetchProfileData.rejected, (state, action) => {
+                state.isLoading = false
+                state.error = action.payload
+            })
+            .addCase(updateProfileData.pending, (state) => {
+                state.error = undefined
+                state.isLoading = true
+            })
+            .addCase(updateProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
+                state.isLoading = false
+                state.data = action.payload
+                state.form = action.payload
+                state.readonly = true
+            })
+            .addCase(updateProfileData.rejected, (state, action) => {
                 state.isLoading = false
                 state.error = action.payload
             })
