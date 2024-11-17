@@ -1,4 +1,3 @@
-import { plugins } from 'eslint-config-standard-with-typescript'
 import path from 'path'
 import type webpack from 'webpack'
 
