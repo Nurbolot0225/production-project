@@ -15,7 +15,7 @@ interface CurrencySelectProps {
 const options = [
     { value: Currency.KGZ, content: Currency.KGZ },
     { value: Currency.RUB, content: Currency.RUB },
-    { value: Currency.USB, content: Currency.USB },
+    { value: Currency.USD, content: Currency.USD },
     { value: Currency.EUR, content: Currency.EUR }
 ]
 

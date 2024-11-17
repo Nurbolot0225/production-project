@@ -1,3 +1,4 @@
+import { plugins } from 'eslint-config-standard-with-typescript'
 import path from 'path'
 import type webpack from 'webpack'
 
@@ -23,7 +24,8 @@ export default (env: BuildEnv) => {
         paths,
         isDev,
         port: PORT,
-        apiUrl
+        apiUrl,
+        project: 'frontend'
     })
 
     return config
