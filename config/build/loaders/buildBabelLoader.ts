@@ -1,6 +1,6 @@
-import { BuildOptions } from '../types/config';
+import { type BuildOptions } from '../types/config'
 
-export function buildBabelLoader({ isDev }: BuildOptions) {
+export function buildBabelLoader ({ isDev }: BuildOptions) {
     return {
         test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
@@ -13,12 +13,12 @@ export function buildBabelLoader({ isDev }: BuildOptions) {
                         'i18next-extract',
                         {
                             locales: ['ru', 'en'],
-                            keyAsDefaultValue: true,
-                        },
+                            keyAsDefaultValue: true
+                        }
                     ],
-                    isDev && require.resolve('react-refresh/babel'),
-                ].filter(Boolean),
-            },
-        },
-    };
+                    isDev && require.resolve('react-refresh/babel')
+                ].filter(Boolean)
+            }
+        }
+    }
 }
