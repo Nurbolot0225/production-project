@@ -553,7 +553,9 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "role": "ADMIN",
+      "avatar": "https://yt3.googleusercontent.com/lAXiyjy8X-nGurf3PQORso2mKYuG9SQzGpJ7vcLHsMP5ycRMQmExg7oQ8y75kRGAbtmKoMMK=s900-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "2",
