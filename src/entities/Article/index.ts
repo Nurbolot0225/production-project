@@ -1,5 +1,6 @@
-export type {
-    Article
+export {
+    type Article,
+    ArticleView
 } from './model/types/article'
 
 export type {

@@ -2,14 +2,16 @@ import { memo, useCallback } from 'react'
 
 import { ArticleDetails } from 'entities/Article'
 import { CommentList } from 'entities/Comment'
-import { AddCommentForm } from 'features/addCommentForm'
+import { AddCommentForm } from 'features/AddCommentForm'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { RoutePath } from 'shared/config/routerConifg/routeConfig'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Text } from 'shared/ui/Text/Text'
 
 import cls from './ArticleDetailPage.module.scss'
@@ -34,6 +36,11 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
     const comments = useSelector(getArticleComments.selectAll)
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
     const commentsError = useSelector(getArticleCommentsError)
+    const navigate = useNavigate()
+
+    const onBackToList = useCallback(() => {
+        navigate(RoutePath.articles)
+    }, [navigate])
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text))
@@ -54,6 +61,12 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames(cls.ArticleDetailPage, {}, [className])}>
+                <Button
+                    theme={ButtonTheme.OUTLINE}
+                    onClick={onBackToList}
+                >
+                    {t('Назад в списку')}
+                </Button>
                 <ArticleDetails
                     id={id}
                 />
