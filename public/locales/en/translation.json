@@ -19,5 +19,7 @@
   "Выйти": "Exit",
   "Укажите валюту": "Chose currency",
   "Укажите страну": "Chose country",
-  "Комментарии отсутствует": "There are no comments"
+  "Комментарии отсутствует": "There are no comments",
+  "Введите текст комментарии": "Enter the text of the comment",
+  "Отправить": "Send"
 }

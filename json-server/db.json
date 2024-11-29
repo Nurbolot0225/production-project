@@ -88,7 +88,7 @@
       "id": "2",
       "title": "Python news",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+      "img": "https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-1024.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -547,6 +547,54 @@
       "userId": "1",
       "text": "python!!!",
       "id": "p5rMadd"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "comment 1",
+      "id": "DvzDpsj"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "comment 2",
+      "id": "pjLsqkR"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "comment",
+      "id": "7Mg4VLD"
+    },
+    {
+      "articleId": "3",
+      "userId": "2",
+      "text": "comment 3",
+      "id": "cTrzyGI"
+    },
+    {
+      "articleId": "3",
+      "userId": "2",
+      "text": "comment 4",
+      "id": "omdlERD"
+    },
+    {
+      "articleId": "3",
+      "userId": "2",
+      "text": "comment 5",
+      "id": "17d1_yM"
+    },
+    {
+      "articleId": "3",
+      "userId": "2",
+      "text": "Hello",
+      "id": "4Pe2kek"
+    },
+    {
+      "articleId": "2",
+      "userId": "2",
+      "text": "Hello World",
+      "id": "DGKvzTn"
     }
   ],
   "users": [
@@ -555,7 +603,7 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://yt3.googleusercontent.com/lAXiyjy8X-nGurf3PQORso2mKYuG9SQzGpJ7vcLHsMP5ycRMQmExg7oQ8y75kRGAbtmKoMMK=s900-c-k-c0x00ffffff-no-rj"
+      "avatar": "https://cdn4.iconfinder.com/data/icons/danger-soft/512/people_user_business_web_man_person_social-1024.png"
     },
     {
       "id": "2",
@@ -575,14 +623,14 @@
       "city": "Bishkek",
       "country": "Kyrgyzstan",
       "username": "admin",
-      "avatar": "https://yt3.googleusercontent.com/lAXiyjy8X-nGurf3PQORso2mKYuG9SQzGpJ7vcLHsMP5ycRMQmExg7oQ8y75kRGAbtmKoMMK=s900-c-k-c0x00ffffff-no-rj",
+      "avatar": "https://cdn4.iconfinder.com/data/icons/danger-soft/512/people_user_business_web_man_person_social-1024.png",
       "lastname": "Berdibekov"
     },
     {
       "id": "2",
       "first": "ulbi tv",
-      "lastname": "asf",
-      "age": 465,
+      "lastName": "Ulbi TV",
+      "age": 24,
       "currency": "RUB",
       "country": "Russia",
       "city": "Moscow",
