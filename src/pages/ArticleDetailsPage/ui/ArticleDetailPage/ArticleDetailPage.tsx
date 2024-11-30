@@ -33,10 +33,10 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
     const { id } = useParams<{ id: string }>()
     const { t } = useTranslation('article-details')
     const dispatch = useAppDispatch()
+    const navigate = useNavigate()
     const comments = useSelector(getArticleComments.selectAll)
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
     const commentsError = useSelector(getArticleCommentsError)
-    const navigate = useNavigate()
 
     const onBackToList = useCallback(() => {
         navigate(RoutePath.articles)

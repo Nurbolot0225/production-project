@@ -1,6 +1,6 @@
 import { AboutPage } from 'pages/AboutPage'
 import { ArticleDetailPage } from 'pages/ArticleDetailsPage'
-import { ArticlePage } from 'pages/ArticlePage'
+import { ArticlePage } from 'pages/ArticlesPage'
 import { MainPage } from 'pages/MainPage'
 import { NotFoundPage } from 'pages/NotFoundPage'
 import { ProfilePage } from 'pages/ProfilePage'

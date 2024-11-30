@@ -14,3 +14,7 @@ export {
 export {
     getArticleDetailsData
 } from './model/selectors/getArticleDetails'
+
+export {
+    ArticleViewSelector
+} from './ui/ArticleViewSelector/ArticleViewSelector'
