@@ -8,6 +8,7 @@ import { type ProfileSchema } from 'entities/Profile'
 import { type UserSchema } from 'entities/User'
 import { type AddCommentFormSchema } from 'features/AddCommentForm'
 import { type LoginSchema } from 'features/AuthByUsername'
+import { type ScrollRestorationSchema } from 'features/ScrollRestoration'
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 import { type CombinedState } from 'redux'
@@ -15,6 +16,7 @@ import { type CombinedState } from 'redux'
 export interface StateSchema {
     counter: CounterSchema
     user: UserSchema
+    scrollRestoration: ScrollRestorationSchema
 
     // Асинхронные редюсеры
     loginForm?: LoginSchema

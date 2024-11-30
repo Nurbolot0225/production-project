@@ -12,8 +12,8 @@ import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/Dyn
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { Page } from 'shared/ui/Page/Page'
 import { Text } from 'shared/ui/Text/Text'
+import { Page } from 'widgets/Page/Page'
 
 import cls from './ArticleDetailPage.module.scss'
 
