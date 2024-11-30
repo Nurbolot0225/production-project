@@ -10,7 +10,7 @@ import { type AddCommentFormSchema } from 'features/AddCommentForm'
 import { type LoginSchema } from 'features/AuthByUsername'
 import { type To } from 'history'
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
-import { type ArticlePageSchema } from 'pages/ArticlesPage'
+import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 import { type NavigateOptions } from 'react-router'
 import { type CombinedState } from 'redux'
 
@@ -24,7 +24,7 @@ export interface StateSchema {
     articleDetails?: ArticleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentsSchema
     addCommentForm?: AddCommentFormSchema
-    articlesPage?: ArticlePageSchema
+    articlesPage?: ArticlesPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

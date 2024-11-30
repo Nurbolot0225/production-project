@@ -1,5 +1,5 @@
 export type {
-    ArticlePageSchema
+    ArticlesPageSchema
 } from './model/types/articlesPageSchema'
 
 export {

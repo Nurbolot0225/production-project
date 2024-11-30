@@ -12,6 +12,7 @@ import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/Dyn
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Page } from 'shared/ui/Page/Page'
 import { Text } from 'shared/ui/Text/Text'
 
 import cls from './ArticleDetailPage.module.scss'
@@ -52,15 +53,15 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames(cls.ArticleDetailPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailPage, {}, [className])}>
                 {t('Статья не найдена')}
-            </div>
+            </Page>
         )
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailPage, {}, [className])}>
                 <Button
                     theme={ButtonTheme.OUTLINE}
                     onClick={onBackToList}
@@ -79,7 +80,7 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     )
 }

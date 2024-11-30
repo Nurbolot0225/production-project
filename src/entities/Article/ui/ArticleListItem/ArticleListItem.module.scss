@@ -1,6 +1,3 @@
-.ArticleListItem {
-}
-
 .BIG {
     .views {
         margin-left: auto;
@@ -33,16 +30,12 @@
     .footer {
         display: flex;
         align-items: center;
+        margin-top: 16px;
     }
 
     .textBlock {
         max-height: 200px;
         overflow-y: hidden;
-
-        &::before {
-            content: "";
-            background-color: black;
-        }
     }
 }
 
@@ -53,8 +46,8 @@
 
     .date {
         position: absolute;
-        top: 0;
         right: 0;
+        top: 0;
         display: none;
     }
 
