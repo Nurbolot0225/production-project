@@ -1,6 +1,8 @@
 import { memo } from 'react'
 
+import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { Text, TextSize } from 'shared/ui/Text/Text'
 
 import cls from './ArticleList.module.scss'
 
@@ -31,6 +33,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
         view = ArticleView.SMALL
     } = props
 
+    const { t } = useTranslation()
+
     const renderArticle = (article: Article) => (
         <ArticleListItem
             article={article}
@@ -39,6 +43,17 @@ export const ArticleList = memo((props: ArticleListProps) => {
             className={cls.card}
         />
     )
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+                <Text
+                    text={t('Статьи не найден')}
+                    size={TextSize.L}
+                />
+            </div>
+        )
+    }
 
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>

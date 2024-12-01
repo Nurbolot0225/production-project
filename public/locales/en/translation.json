@@ -21,5 +21,17 @@
   "Укажите страну": "Chose country",
   "Комментарии отсутствует": "There are no comments",
   "Введите текст комментарии": "Enter the text of the comment",
-  "Отправить": "Send"
+  "Отправить": "Send",
+  "по": "by",
+  "возрастание": "ascending",
+  "убывание": "waning",
+  "Сортировать ПО": "Sort BY",
+  "дата созданию": "creation date",
+  "названию": "title",
+  "просмотром": "view",
+  "Экономика": "Economics",
+  "Наука": "Science",
+  "Айти": "IT",
+  "Все статьи": "All articles",
+  "Статьи не найден": "No article found"
 }

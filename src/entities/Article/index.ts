@@ -1,6 +1,8 @@
 export {
     type Article,
-    ArticleView
+    ArticleView,
+    ArticleSortField,
+    ArticleType
 } from './model/types/article'
 
 export type {
@@ -18,3 +20,7 @@ export {
 export {
     ArticleViewSelector
 } from './ui/ArticleViewSelector/ArticleViewSelector'
+
+export {
+    ArticleTypeTabs
+} from './ui/ArticleTypeTabs/ArticleTypeTabs'
