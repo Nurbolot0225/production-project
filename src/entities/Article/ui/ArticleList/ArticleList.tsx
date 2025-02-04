@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -15,6 +15,7 @@ interface ArticleListProps {
     articles: Article[]
     isLoading?: boolean
     view?: ArticleView
+    target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: ArticleView) => {
@@ -30,7 +31,8 @@ export const ArticleList = memo((props: ArticleListProps) => {
         className,
         articles,
         isLoading,
-        view = ArticleView.SMALL
+        view = ArticleView.SMALL,
+        target
     } = props
 
     const { t } = useTranslation()
@@ -41,6 +43,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
             view={view}
             key={article.id}
             className={cls.card}
+            target={target}
         />
     )
 
