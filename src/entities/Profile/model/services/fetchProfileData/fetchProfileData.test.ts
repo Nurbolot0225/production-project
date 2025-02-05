@@ -21,6 +21,7 @@ describe('fetchProfileData.test', () => {
 
         const result = await thunk.callThunk('1')
 
+        // eslint-disable-next-line
         expect(thunk.api.get).toHaveBeenCalled()
         expect(result.meta.requestStatus).toBe('fulfilled')
         expect(result.payload).toEqual(data)

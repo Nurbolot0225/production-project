@@ -31,6 +31,7 @@ describe('updateProfileData.test', () => {
 
         const result = await thunk.callThunk()
 
+        // eslint-disable-next-line
         expect(thunk.api.put).toHaveBeenCalled()
         expect(result.meta.requestStatus).toBe('fulfilled')
         expect(result.payload).toEqual(data)
