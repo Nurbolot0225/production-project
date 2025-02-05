@@ -22,7 +22,7 @@ describe('profileSlice.test', () => {
         const state: DeepPartial<ProfileSchema> = { readonly: false }
         expect(profileReducer(
             state as ProfileSchema,
-            profileActions.setReadOnly(true)
+            profileActions.setReadonly(true)
         )).toEqual({ readonly: true })
     })
 

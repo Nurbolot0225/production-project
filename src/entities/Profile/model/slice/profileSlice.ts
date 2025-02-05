@@ -1,11 +1,12 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { fetchProfileData, type Profile, updateProfileData } from 'entities/Profile'
 
-import { type ProfileSchema } from '../types/Profile'
+import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData'
+import { updateProfileData } from '../services/updateProfileData/updateProfileData'
+import { type Profile, type ProfileSchema } from '../types/profile'
 
 const initialState: ProfileSchema = {
-    isLoading: false,
     readonly: true,
+    isLoading: false,
     error: undefined,
     data: undefined
 }
@@ -14,13 +15,13 @@ export const profileSlice = createSlice({
     name: 'profile',
     initialState,
     reducers: {
-        setReadOnly: (state, action: PayloadAction<boolean>) => {
+        setReadonly: (state, action: PayloadAction<boolean>) => {
             state.readonly = action.payload
         },
         cancelEdit: (state) => {
             state.readonly = true
-            state.form = state.data
             state.validateErrors = undefined
+            state.form = state.data
         },
         updateProfile: (state, action: PayloadAction<Profile>) => {
             state.form = {
@@ -35,7 +36,10 @@ export const profileSlice = createSlice({
                 state.error = undefined
                 state.isLoading = true
             })
-            .addCase(fetchProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
+            .addCase(fetchProfileData.fulfilled, (
+                state,
+                action: PayloadAction<Profile>
+            ) => {
                 state.isLoading = false
                 state.data = action.payload
                 state.form = action.payload
@@ -48,7 +52,10 @@ export const profileSlice = createSlice({
                 state.validateErrors = undefined
                 state.isLoading = true
             })
-            .addCase(updateProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
+            .addCase(updateProfileData.fulfilled, (
+                state,
+                action: PayloadAction<Profile>
+            ) => {
                 state.isLoading = false
                 state.data = action.payload
                 state.form = action.payload
