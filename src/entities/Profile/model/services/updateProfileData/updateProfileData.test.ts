@@ -8,13 +8,14 @@ import { ValidateProfileError } from '../../types/profile'
 
 const data = {
     id: '1',
-    username: 'admin',
+    first: 'Нурболот',
+    lastName: 'Бердибеков',
     age: 22,
-    country: Country.Ukraine,
-    lastname: 'ulbi tv',
-    first: 'asd',
-    city: 'asf',
-    currency: Currency.USD
+    currency: Currency.KGZ,
+    city: 'Bishkek',
+    country: Country.Kyrgyzstan,
+    username: 'admin',
+    lastname: 'Berdibekov'
 }
 
 describe('updateProfileData.test', () => {
@@ -30,7 +31,6 @@ describe('updateProfileData.test', () => {
 
         const result = await thunk.callThunk()
 
-        // eslint-disable-next-line
         expect(thunk.api.put).toHaveBeenCalled()
         expect(result.meta.requestStatus).toBe('fulfilled')
         expect(result.payload).toEqual(data)
@@ -57,7 +57,7 @@ describe('updateProfileData.test', () => {
         const thunk = new TestAsyncThunk(updateProfileData, {
             // @ts-expect-error
             profile: {
-                form: { ...data, lastName: '' }
+                form: { ...data, lastname: '' }
             }
         })
         const result = await thunk.callThunk()

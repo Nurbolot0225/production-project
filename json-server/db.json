@@ -757,19 +757,18 @@
     {
       "id": "1",
       "first": "Нурболот",
-      "lastName": "Бердибеков",
+      "lastname": "Бердибеков",
       "age": 22,
       "currency": "KGZ",
       "city": "Bishkek",
       "country": "Kyrgyzstan",
       "username": "admin",
-      "avatar": "https://cdn4.iconfinder.com/data/icons/danger-soft/512/people_user_business_web_man_person_social-1024.png",
-      "lastname": "Berdibekov"
+      "avatar": "https://cdn4.iconfinder.com/data/icons/danger-soft/512/people_user_business_web_man_person_social-1024.png"
     },
     {
       "id": "2",
       "first": "ulbi tv",
-      "lastName": "Ulbi TV",
+      "lastname": "Ulbi TV",
       "age": 24,
       "currency": "RUB",
       "country": "Russia",

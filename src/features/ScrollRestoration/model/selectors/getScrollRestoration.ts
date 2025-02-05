@@ -5,6 +5,6 @@ export const getScrollRestoration = (state: StateSchema) => state.scrollRestorat
 
 export const getScrollRestorationByPath = createSelector(
     getScrollRestoration,
-    (state: StateSchema, path: string) => path,
+    (_: StateSchema, path: string) => path,
     (scroll, path) => scroll[path] || 0
 )

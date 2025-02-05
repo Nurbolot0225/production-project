@@ -7,7 +7,7 @@ import { ValidateProfileError } from '../../types/profile'
 
 const data = {
     first: 'Нурболот',
-    lastName: 'Бердибеков',
+    lastname: 'Бердибеков',
     age: 22,
     currency: Currency.KGZ,
     country: Country.Kyrgyzstan,
@@ -23,7 +23,7 @@ describe('validateProfileData.test', () => {
     })
 
     test('without first and last name', async () => {
-        const result = validateProfileData({ ...data, first: '', lastName: '' })
+        const result = validateProfileData({ ...data, first: '', lastname: '' })
 
         expect(result).toEqual([
             ValidateProfileError.INCORRECT_USER_DATA

@@ -3,18 +3,13 @@ import { type User } from 'entities/User'
 export enum ArticleSortField {
     VIEWS = 'views',
     TITLE = 'title',
-    CREATED = 'createdAt'
+    CREATED = 'createdAt',
 }
 
 export enum ArticleBlockType {
     CODE = 'CODE',
     IMAGE = 'IMAGE',
-    TEXT = 'TEXT'
-}
-
-export enum ArticleView {
-    BIG = 'BIG',
-    SMALL = 'SMALL'
+    TEXT = 'TEXT',
 }
 
 export interface ArticleBlockBase {
@@ -35,8 +30,8 @@ export interface ArticleImageBlock extends ArticleBlockBase {
 
 export interface ArticleTextBlock extends ArticleBlockBase {
     type: ArticleBlockType.TEXT
-    title?: string
     paragraphs: string[]
+    title?: string
 }
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock
@@ -45,7 +40,12 @@ export enum ArticleType {
     ALL = 'ALL',
     IT = 'IT',
     SCIENCE = 'SCIENCE',
-    ECONOMICS = 'ECONOMICS',
+    ECONOMICS = 'ECONOMICS'
+}
+
+export enum ArticleView {
+    BIG = 'BIG',
+    SMALL = 'SMALL',
 }
 
 export interface Article {
@@ -56,7 +56,6 @@ export interface Article {
     img: string
     views: number
     createdAt: string
-    userId: string
     type: ArticleType[]
     blocks: ArticleBlock[]
 }

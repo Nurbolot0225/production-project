@@ -11,7 +11,6 @@ import { Input } from 'shared/ui/Input/Input'
 import cls from './AddCommentForm.module.scss'
 
 import {
-    getAddCommentFormError,
     getAddCommentFormText
 } from '../../model/selectors/addCommentFormSelectors'
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slice/addCommentFormSlice'
@@ -33,7 +32,6 @@ const addCommentForm = memo((props: AddCommentFormProps) => {
 
     const dispatch = useAppDispatch()
     const text = useSelector(getAddCommentFormText)
-    const error = useSelector(getAddCommentFormError)
     const { t } = useTranslation()
 
     const onCommentTextChange = useCallback((value: string) => {

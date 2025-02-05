@@ -58,7 +58,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     }, [dispatch])
 
     const onChangeLastName = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ lastName: value || '' }))
+        dispatch(profileActions.updateProfile({ lastname: value || '' }))
     }, [dispatch])
 
     const onChangeAge = useCallback((value?: string) => {

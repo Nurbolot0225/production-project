@@ -5,19 +5,20 @@ import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 import { fetchProfileData } from './fetchProfileData'
 
 const data = {
-    first: 'Нурболот',
-    lastName: 'Бердибеков',
+    username: 'admin',
     age: 22,
-    currency: Currency.KGZ,
     country: Country.Kyrgyzstan,
+    lastname: 'Berdibekov',
+    first: 'Nurbolot',
     city: 'Bishkek',
-    username: 'admin'
+    currency: Currency.KGZ
 }
 
 describe('fetchProfileData.test', () => {
     test('success', async () => {
         const thunk = new TestAsyncThunk(fetchProfileData)
         thunk.api.get.mockReturnValue(Promise.resolve({ data }))
+
         const result = await thunk.callThunk('1')
 
         expect(thunk.api.get).toHaveBeenCalled()
