@@ -24,7 +24,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
     const canEdit = authData?.id === profileData?.id
 
     const onEdit = useCallback(() => {
-        dispatch(profileActions.setReadOnly(false))
+        dispatch(profileActions.setReadonly(false))
     }, [dispatch])
 
     const onCancelEdit = useCallback(() => {
