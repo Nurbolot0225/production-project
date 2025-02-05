@@ -7,13 +7,11 @@ import { AddCommentForm } from 'features/AddCommentForm'
 import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { useNavigate, useParams } from 'react-router-dom'
-import { RoutePath } from 'shared/config/routerConifg/routeConfig'
+import { useParams } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { Page } from 'widgets/Page/Page'
 
@@ -30,6 +28,9 @@ import { getArticleComments } from '../../model/slices/articleDetailsCommentsSli
 import {
     getArticleRecommendations
 } from '../../model/slices/articleDetailsPageRecommendationsSlice'
+import {
+    ArticlesDetailsPageHeader
+} from '../../ui/ArticlesDetailsPageHeader/ArticlesDetailsPageHeader'
 
 interface ArticleDetailPageProps {
     className?: string
@@ -43,15 +44,10 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
     const { id } = useParams<{ id: string }>()
     const { t } = useTranslation('article-details')
     const dispatch = useAppDispatch()
-    const navigate = useNavigate()
     const comments = useSelector(getArticleComments.selectAll)
     const recommendations = useSelector(getArticleRecommendations.selectAll)
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
     const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading)
-
-    const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles)
-    }, [navigate])
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text))
@@ -73,12 +69,7 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailPage, {}, [className])}>
-                <Button
-                    theme={ButtonTheme.OUTLINE}
-                    onClick={onBackToList}
-                >
-                    {t('Назад в списку')}
-                </Button>
+                <ArticlesDetailsPageHeader />
                 <ArticleDetails
                     id={id}
                 />
