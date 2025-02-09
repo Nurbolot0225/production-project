@@ -7,6 +7,7 @@ import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/Dyn
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'
+import { HStack } from 'shared/ui/Stack'
 
 import cls from './AddCommentForm.module.scss'
 
@@ -45,7 +46,11 @@ const addCommentForm = memo((props: AddCommentFormProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.addCommentForm, {}, [className])}>
+            <HStack
+                max
+                justify='between'
+                className={classNames(cls.addCommentForm, {}, [className])}
+            >
                 <Input
                     className={cls.input}
                     placeholder={t('Введите текст комментарии')}
@@ -59,7 +64,7 @@ const addCommentForm = memo((props: AddCommentFormProps) => {
                 >
                     {t('Отправить')}
                 </Button>
-            </div>
+            </HStack>
         </DynamicModuleLoader>
     )
 })
