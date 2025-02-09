@@ -38,7 +38,8 @@ module.exports = {
         'react',
         'import',
         'i18next',
-        'react-hooks'
+        'react-hooks',
+        'nurbolot-plugin'
     ],
     rules: {
         'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
@@ -107,6 +108,7 @@ module.exports = {
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-invalid-void-type': 'off',
         '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
+        'nurbolot-plugin/path-checker': 'error',
         '@typescript-eslint/no-unused-vars': [
             'error',
             {
@@ -122,7 +124,7 @@ module.exports = {
         'i18next/no-literal-string': [
             'error',
             {
-                markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'target']
+                markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'target', 'ref']
             }
         ]
     },
