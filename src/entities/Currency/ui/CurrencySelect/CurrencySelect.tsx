@@ -3,6 +3,7 @@ import { memo, useCallback } from 'react'
 import { Currency } from 'entities/Currency'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
 import { Select } from 'shared/ui/Select/Select'
 
 interface CurrencySelectProps {
@@ -34,10 +35,10 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
     }, [onChange])
 
     return (
-        <Select
+        <ListBox
             label={t('Укажите валюту')}
             className={classNames('', {}, [className])}
-            options={options}
+            items={options}
             value={value}
             readonly={readonly}
             onChange={onChangeHandler}
