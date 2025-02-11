@@ -50,22 +50,22 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     if (!isLoading && !articles.length) {
         return (
-            <HStack max className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
                 <Text
                     text={t('Статьи не найден')}
                     size={TextSize.L}
                 />
-            </HStack>
+            </div>
         )
     }
 
     return (
-        <HStack max className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {articles.length > 0
                 ? articles.map(renderArticle)
                 : null
             }
             {isLoading && getSkeletons(view)}
-        </HStack>
+        </div>
     )
 })
