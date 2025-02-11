@@ -4,7 +4,6 @@ import { Currency } from 'entities/Currency'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { ListBox } from 'shared/ui/ListBox/ListBox'
-import { Select } from 'shared/ui/Select/Select'
 
 interface CurrencySelectProps {
     className?: string
@@ -42,6 +41,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
             value={value}
             readonly={readonly}
             onChange={onChangeHandler}
+            direction='top right'
         />
     )
 })

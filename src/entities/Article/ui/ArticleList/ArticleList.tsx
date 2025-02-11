@@ -2,6 +2,7 @@ import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { HStack } from 'shared/ui/Stack'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 
 import cls from './ArticleList.module.scss'
@@ -49,22 +50,22 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     if (!isLoading && !articles.length) {
         return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+            <HStack max className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
                 <Text
                     text={t('Статьи не найден')}
                     size={TextSize.L}
                 />
-            </div>
+            </HStack>
         )
     }
 
     return (
-        <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        <HStack max className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {articles.length > 0
                 ? articles.map(renderArticle)
                 : null
             }
             {isLoading && getSkeletons(view)}
-        </div>
+        </HStack>
     )
 })

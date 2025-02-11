@@ -1,5 +1,10 @@
 import {
-    type ChangeEvent, type InputHTMLAttributes, memo, useEffect, useRef, useState
+    type ChangeEvent,
+    type InputHTMLAttributes,
+    memo,
+    useEffect,
+    useRef,
+    useState
 } from 'react'
 
 import { classNames, type Mods } from 'shared/lib/classNames/classNames'
@@ -23,7 +28,7 @@ export const Input = memo((props: InputProps) => {
         className,
         value,
         onChange,
-        type,
+        type = 'text',
         placeholder,
         autofocus,
         readonly,
