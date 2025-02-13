@@ -2,7 +2,6 @@ import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { HStack } from 'shared/ui/Stack'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 
 import cls from './ArticleList.module.scss'
