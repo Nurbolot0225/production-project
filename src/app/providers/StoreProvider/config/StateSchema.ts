@@ -4,7 +4,7 @@ import {
 import { type AxiosInstance } from 'axios'
 import { type ArticleDetailsSchema } from 'entities/Article'
 import { type UserSchema } from 'entities/User'
-import { type AddCommentFormSchema } from 'features/AddCommentForm'
+import { type AddCommentFormSchema } from 'features/addCommentForm'
 import { type LoginSchema } from 'features/AuthByUsername'
 import { type ProfileSchema } from 'features/editableProfileCard'
 import { type UISchema } from 'features/UI'
