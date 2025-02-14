@@ -14,7 +14,7 @@ interface ArticlesDetailsPageHeaderProps {
     className?: string
 }
 
-export const ArticlesDetailsPageHeader = memo((props: ArticlesDetailsPageHeaderProps) => {
+export const ArticleDetailsPageHeader = memo((props: ArticlesDetailsPageHeaderProps) => {
     const {
         className
     } = props

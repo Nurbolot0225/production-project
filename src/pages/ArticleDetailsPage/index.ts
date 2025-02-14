@@ -10,5 +10,5 @@ export type {
 } from './model/types/articleDetailsPageSchema'
 
 export {
-    ArticleDetailPageAsync as ArticleDetailPage
-} from './ui/ArticleDetailPage/ArticleDetailPage.async'
+    ArticleDetailsPageAsync as ArticleDetailPage
+} from './ui/ArticleDetailPage/ArticleDetailsPage.async'

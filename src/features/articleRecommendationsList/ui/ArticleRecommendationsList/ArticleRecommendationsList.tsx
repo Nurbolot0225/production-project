@@ -1,17 +1,20 @@
 import { memo } from 'react'
 
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList'
-import { useArticleRecommendationsList } from 'features/articleRecommendationList/api/articleRecommendationsApi'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { VStack } from 'shared/ui/Stack'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 
+import {
+    useArticleRecommendationsList
+} from '../../api/articleRecommendationsApi'
+
 interface ArticleRecommendationListProps {
     className?: string
 }
 
-export const ArticleRecommendationList = memo((props: ArticleRecommendationListProps) => {
+export const ArticleRecommendationsList = memo((props: ArticleRecommendationListProps) => {
     const { className } = props
     const { t } = useTranslation()
     const { isLoading, error, data: articles } = useArticleRecommendationsList(4)

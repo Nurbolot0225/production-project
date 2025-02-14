@@ -1,26 +1,21 @@
 import { memo } from 'react'
 
 import { ArticleDetails } from 'entities/Article'
-import { ArticleRecommendationList } from 'features/articleRecommendationList'
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices'
+import { ArticleRecommendationsList } from 'features/articleRecommendationsList'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { VStack } from 'shared/ui/Stack'
 import { Page } from 'widgets/Page/Page'
 
-import cls from './ArticleDetailPage.module.scss'
+import cls from './ArticleDetailsPage.module.scss'
 
-import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import { ArticleDetailsComments } from '../../ui/ArticleDetailsComments/ArticleDetailsComments'
-import {
-    ArticlesDetailsPageHeader
-} from '../../ui/ArticlesDetailsPageHeader/ArticlesDetailsPageHeader'
+import { articleDetailsPageReducer } from '../../model/slices'
+import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 
-interface ArticleDetailPageProps {
+interface ArticleDetailsPageProps {
     className?: string
 }
 
@@ -28,18 +23,14 @@ const reducers: ReducersList = {
     articleDetailsPage: articleDetailsPageReducer
 }
 
-const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
-    const { id } = useParams<{ id: string }>()
+const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
+    const { className } = props
     const { t } = useTranslation('article-details')
-    const dispatch = useAppDispatch()
-
-    useInitialEffect(() => {
-        dispatch(fetchCommentsByArticleId(id))
-    })
+    const { id } = useParams<{ id: string }>()
 
     if (!id) {
         return (
-            <Page className={classNames(cls.ArticleDetailPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 {t('Статья не найдена')}
             </Page>
         )
@@ -47,11 +38,11 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Page className={classNames(cls.ArticleDetailPage, {}, [className])}>
-                <VStack max gap='16'>
-                    <ArticlesDetailsPageHeader />
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+                <VStack gap="16" max>
+                    <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    <ArticleRecommendationList />
+                    <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>
             </Page>
@@ -59,4 +50,4 @@ const ArticleDetailPage = ({ className }: ArticleDetailPageProps) => {
     )
 }
 
-export default memo(ArticleDetailPage)
+export default memo(ArticleDetailsPage)
