@@ -741,6 +741,30 @@
       "userId": "1",
       "text": "Hello World",
       "id": "vwVQUfk"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "Go language",
+      "id": "Ot9EJSo"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "text": "Салам все работает хорошо",
+      "id": "AuyxqCj"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "молодец",
+      "id": "huA6jPn"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "проверим работает ли skeleton",
+      "id": "rZ_a8Px"
     }
   ],
   "users": [

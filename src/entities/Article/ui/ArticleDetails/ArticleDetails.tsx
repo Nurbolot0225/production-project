@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import CalendarIcon from 'shared/assets/icons/calendar.svg'
 import EyeIcon from 'shared/assets/icons/eye.svg'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Icon } from 'shared/ui/Icon/Icon'
@@ -32,7 +32,7 @@ interface ArticleDetailsProps {
     id: string
 }
 
-const reducers: ReducerList = {
+const reducers: ReducersList = {
     articleDetails: articleDetailsReducer
 }
 

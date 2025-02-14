@@ -1,7 +1,7 @@
 import { memo, type MutableRefObject, type ReactNode, type UIEvent, useRef } from 'react'
 
 import { type StateSchema } from 'app/providers/StoreProvider'
-import { getScrollRestorationByPath, scrollRestorationActions } from 'features/ScrollRestoration'
+import { getUIScrollByPath, uiActions } from 'features/UI'
 import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -28,17 +28,18 @@ export const Page = memo((props: PageProps) => {
     const dispatch = useAppDispatch()
     const { pathname } = useLocation()
     const scrollPosition = useSelector(
-        (state: StateSchema) => getScrollRestorationByPath(state, pathname))
+        (state: StateSchema) => getUIScrollByPath(state, pathname)
+    )
 
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>
 
-    const onScroll = useThrottle((event: UIEvent<HTMLDivElement>) => {
-        dispatch(scrollRestorationActions.setScrollPosition({
-            path: pathname,
-            position: event.currentTarget.scrollTop
+    const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
+        dispatch(uiActions.setScrollPosition({
+            position: e.currentTarget.scrollTop,
+            path: pathname
         }))
-    }, 1000)
+    }, 500)
 
     useInfiniteScroll({
         triggerRef,
