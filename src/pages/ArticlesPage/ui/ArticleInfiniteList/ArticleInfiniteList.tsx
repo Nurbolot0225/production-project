@@ -9,8 +9,6 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Text } from 'shared/ui/Text/Text'
 
-import cls from './ArticleInfiniteList.module.scss'
-
 import {
     getArticlesPageError,
     getArticlesPageIsLoading,
@@ -46,7 +44,7 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
     }
 
     return (
-        <div className={classNames(cls.ArticleInfiniteList, {}, [className])}>
+        <div className={classNames('', {}, [className])}>
             <ArticleList
                 isLoading={isLoading}
                 view={view}
