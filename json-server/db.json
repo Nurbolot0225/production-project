@@ -771,6 +771,36 @@
       "userId": "1",
       "text": "hello",
       "id": "fBB8-00"
+    },
+    {
+      "articleId": "11",
+      "userId": "2",
+      "text": "kotlin android",
+      "id": "f4cz82m"
+    },
+    {
+      "articleId": "4",
+      "userId": "2",
+      "text": "Scale database",
+      "id": "85Dp93o"
+    },
+    {
+      "articleId": "4",
+      "userId": "2",
+      "text": "    ",
+      "id": "u9Ee0-c"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "Ruby top language",
+      "id": "H5oweRW"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": " ",
+      "id": "wfKL4ck"
     }
   ],
   "users": [
@@ -778,21 +808,28 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://cdn4.iconfinder.com/data/icons/danger-soft/512/people_user_business_web_man_person_social-1024.png"
     },
     {
       "id": "2",
       "username": "manager",
       "password": "123",
-      "roles": ["ADMIN", "MANAGER"],
+      "roles": [
+        "ADMIN",
+        "MANAGER"
+      ],
       "avatar": "https://hookahome-kzn.ru/wp-content/uploads/2021/12/orig.png"
     },
     {
       "id": "3",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://distribution.faceit-cdn.net/images/08bd0dbe-2f12-4412-93db-53cbfc5a4377.jpeg"
     }
   ],
@@ -812,7 +849,7 @@
       "id": "2",
       "first": "Менеджер",
       "lastname": "Manager",
-      "age": 25,
+      "age": 23,
       "currency": "KGZ",
       "city": "Bishkek",
       "country": "Kyrgyzstan",

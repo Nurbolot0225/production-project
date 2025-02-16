@@ -14,7 +14,10 @@ import cls from './AddCommentForm.module.scss'
 import {
     getAddCommentFormText
 } from '../../model/selectors/addCommentFormSelectors'
-import { addCommentFormActions, addCommentFormReducer } from '../../model/slice/addCommentFormSlice'
+import {
+    addCommentFormActions,
+    addCommentFormReducer
+} from '../../model/slice/addCommentFormSlice'
 
 export interface AddCommentFormProps {
     className?: string
@@ -32,8 +35,8 @@ const addCommentForm = memo((props: AddCommentFormProps) => {
     } = props
 
     const dispatch = useAppDispatch()
-    const text = useSelector(getAddCommentFormText)
     const { t } = useTranslation()
+    const text = useSelector(getAddCommentFormText)
 
     const onCommentTextChange = useCallback((value: string) => {
         dispatch(addCommentFormActions.setText(value))
@@ -58,6 +61,7 @@ const addCommentForm = memo((props: AddCommentFormProps) => {
                     onChange={onCommentTextChange}
                 />
                 <Button
+                    disabled={Boolean(!text.trim().length)}
                     theme={ButtonTheme.OUTLINE}
                     onClick={onSendHandler}
                     type="submit"

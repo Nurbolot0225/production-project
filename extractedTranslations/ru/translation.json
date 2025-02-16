@@ -8,6 +8,7 @@
       "": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quos."
     }
   },
+  "adminPanelPage": "adminPanelPage",
   "decrement": "decrement",
   "error": "error",
   "increment": "increment",

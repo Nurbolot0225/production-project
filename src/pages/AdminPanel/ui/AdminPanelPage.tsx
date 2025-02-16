@@ -6,7 +6,7 @@ const AdminPanelPage = () => {
 
     return (
         <Page>
-            <div>AdminPanelPage</div>
+            {t('adminPanelPage')}
         </Page>
     )
 }
