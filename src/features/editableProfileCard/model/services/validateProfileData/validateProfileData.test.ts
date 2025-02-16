@@ -3,7 +3,7 @@ import { Currency } from 'entities/Currency'
 
 import { validateProfileData } from './validateProfileData'
 
-import { ValidateProfileError } from '../../types/editableProfileCardSchema'
+import { ValidateProfileError } from '../../constants/constants'
 
 const data = {
     first: 'Нурболот',

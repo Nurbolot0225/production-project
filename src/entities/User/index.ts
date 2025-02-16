@@ -1,8 +1,11 @@
 export {
     type UserSchema,
-    UserRole,
     type User
 } from './model/types/user'
+
+export {
+    UserRole
+} from './model/constants/userConstants'
 
 export {
     userReducer,
