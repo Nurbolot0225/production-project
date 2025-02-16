@@ -37,6 +37,7 @@ module.exports = {
     plugins: [
         'react',
         'import',
+        '@typescript-eslint',
         'i18next',
         'react-hooks',
         'nurbolot-plugin'
@@ -103,7 +104,7 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/array-type': 'error',
         '@typescript-eslint/no-confusing-void-expression': 'off',
-        // '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/consistent-type-imports': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-invalid-void-type': 'off',
