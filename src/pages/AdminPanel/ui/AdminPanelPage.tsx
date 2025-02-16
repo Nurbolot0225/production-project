@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { Page } from 'widgets/Page/Page'
 
-const AboutPage = () => {
-    const { t } = useTranslation('about')
+const AdminPanelPage = () => {
+    const { t } = useTranslation()
 
     return (
         <Page>
-            {t('О сайте')}
+            <div>AdminPanelPage</div>
         </Page>
     )
 }
 
-export default AboutPage
+export default AdminPanelPage

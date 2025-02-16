@@ -37,5 +37,7 @@
   "Habr": "Habr",
   "Создать статью": "Create an article",
   "Профиль": "Profile",
-  "Ошибка при загрузка статей": "Error when uploading articles"
+  "Админка": "Admin panel",
+  "Ошибка при загрузка статей": "Error when uploading articles",
+  "Forbidden": "You do not have access to this page"
 }

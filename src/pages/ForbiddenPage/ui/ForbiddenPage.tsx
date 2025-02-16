@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { Page } from 'widgets/Page/Page'
 
-const AboutPage = () => {
-    const { t } = useTranslation('about')
+const ForbiddenPage = () => {
+    const { t } = useTranslation()
 
     return (
         <Page>
-            {t('О сайте')}
+            {t('Forbidden')}
         </Page>
     )
 }
 
-export default AboutPage
+export default ForbiddenPage

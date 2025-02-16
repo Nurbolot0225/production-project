@@ -1,6 +1,6 @@
 import { memo, useCallback, useState } from 'react'
 
-import { getUserAuthData, userActions } from 'entities/User'
+import { getUserAuthData, isUserAdmin, isUserManager, userActions } from 'entities/User'
 import { LoginModal } from 'features/AuthByUsername'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
@@ -23,6 +23,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const dispatch = useDispatch()
     const authData = useSelector(getUserAuthData)
     const [isAuthModal, setIsAuthModal] = useState<boolean>(false)
+    const isAdmin = useSelector(isUserAdmin)
+    const isManager = useSelector(isUserManager)
 
     const onShowModal = useCallback(() => {
         setIsAuthModal(true)
@@ -35,6 +37,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const onLogout = useCallback(() => {
         dispatch(userActions.logout())
     }, [dispatch])
+
+    const isAdminPanelAvailable = isAdmin || isManager
 
     if (authData) {
         return (
@@ -55,6 +59,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     className={cls.dropdown}
                     direction='bottom left'
                     items={[
+                        ...(isAdminPanelAvailable
+                            ? [{
+                                content: t('Админка'),
+                                href: RoutePath.admin_panel
+                            }]
+                            : []),
                         {
                             content: t('Профиль'),
                             href: RoutePath.profile + authData.id
@@ -71,13 +81,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                         />
                     }
                 />
-                {/* <Button */}
-                {/*    theme={ButtonTheme.CLEAR_INVERTED} */}
-                {/*    className={cls.links} */}
-                {/*    onClick={onLogout} */}
-                {/* > */}
-                {/*    {t('Выйти')} */}
-                {/* </Button> */}
             </header>
         )
     }

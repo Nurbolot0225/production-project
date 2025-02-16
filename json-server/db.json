@@ -778,15 +778,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://cdn4.iconfinder.com/data/icons/danger-soft/512/people_user_business_web_man_person_social-1024.png"
     },
     {
       "id": "2",
+      "username": "manager",
+      "password": "123",
+      "roles": ["ADMIN", "MANAGER"],
+      "avatar": "https://hookahome-kzn.ru/wp-content/uploads/2021/12/orig.png"
+    },
+    {
+      "id": "3",
       "username": "user",
       "password": "123",
-      "role": "USER",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "roles": ["USER"],
+      "avatar": "https://distribution.faceit-cdn.net/images/08bd0dbe-2f12-4412-93db-53cbfc5a4377.jpeg"
     }
   ],
   "profile": [
@@ -803,6 +810,17 @@
     },
     {
       "id": "2",
+      "first": "Менеджер",
+      "lastname": "Manager",
+      "age": 25,
+      "currency": "KGZ",
+      "city": "Bishkek",
+      "country": "Kyrgyzstan",
+      "username": "manager",
+      "avatar": "https://hookahome-kzn.ru/wp-content/uploads/2021/12/orig.png"
+    },
+    {
+      "id": "3",
       "first": "ulbi tv",
       "lastname": "Ulbi TV",
       "age": 24,
@@ -810,7 +828,7 @@
       "country": "Russia",
       "city": "Moscow",
       "username": "ulbi tv",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://distribution.faceit-cdn.net/images/08bd0dbe-2f12-4412-93db-53cbfc5a4377.jpeg"
     }
   ]
 }
