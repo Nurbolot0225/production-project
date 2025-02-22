@@ -7,7 +7,7 @@ import { Select, type SelectOption } from 'shared/ui/Select/Select'
 
 import cls from './ArticleSortSelector.module.scss'
 
-import { ArticleSortField } from '../../model/types/article'
+import { ArticleSortField } from '../../model/constants/articleConstants'
 
 interface ArticleSortSelectorProps {
     className?: string
