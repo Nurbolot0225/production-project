@@ -1,4 +1,66 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Новый комментарий к вашей статье",
+      "description": "Пользователь @ivan_p написал комментарий к вашей статье \"Как улучшить производительность React-приложения\".",
+      "userId": "1",
+      "type": "comment",
+      "href": "http://localhost:3000/articles/123#comment-456",
+      "createdAt": "2024-02-22T14:30:00Z",
+      "read": false
+    },
+    {
+      "id": "2",
+      "title": "Ваша статья попала в тренды",
+      "description": "Поздравляем! Ваша статья \"Лучшие практики TypeScript\" попала в топ публикаций дня.",
+      "userId": "1",
+      "type": "trending",
+      "href": "http://localhost:3000/articles/789",
+      "createdAt": "2024-02-22T14:45:00Z",
+      "read": false
+    },
+    {
+      "id": "3",
+      "title": "Новый подписчик",
+      "description": "Пользователь @tech_guru подписался на вас.",
+      "userId": "1",
+      "type": "subscription",
+      "href": "http://localhost:3000/users/tech_guru",
+      "createdAt": "2024-02-22T15:00:00Z",
+      "read": true
+    },
+    {
+      "id": "4",
+      "title": "Ответ на ваш комментарий",
+      "description": "Пользователь @frontend_master ответил на ваш комментарий в статье \"Погружение в Vue 3\".",
+      "userId": "1",
+      "type": "reply",
+      "href": "http://localhost:3000/articles/456#comment-789",
+      "createdAt": "2024-02-22T15:30:00Z",
+      "read": true
+    },
+    {
+      "id": "5",
+      "title": "Ваш вопрос получил ответ",
+      "description": "Пользователь @dev_hero ответил на ваш вопрос \"Как правильно использовать useEffect?\"",
+      "userId": "1",
+      "type": "answer",
+      "href": "http://localhost:3000/questions/321#answer-654",
+      "createdAt": "2024-02-22T16:00:00Z",
+      "read": false
+    },
+    {
+      "id": "6",
+      "title": "Обновление правил платформы",
+      "description": "Мы обновили правила публикации статей. Ознакомьтесь с новыми требованиями.",
+      "userId": "1",
+      "type": "announcement",
+      "href": "http://localhost:3000/rules",
+      "createdAt": "2024-02-22T16:30:00Z",
+      "read": false
+    }
+  ],
   "posts": [
     {
       "id": "1",

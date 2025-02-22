@@ -40,5 +40,6 @@
   "Админка": "Admin panel",
   "Ошибка при загрузка статей": "Error when uploading articles",
   "Forbidden": "You do not have access to this page",
-  "adminPanelPage": "admin panel page"
+  "adminPanelPage": "admin panel page",
+  "Не удалось загрузить уведомление": "Couldn't load notification"
 }
