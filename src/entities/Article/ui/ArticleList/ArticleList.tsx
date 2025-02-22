@@ -6,7 +6,8 @@ import { Text, TextSize } from 'shared/ui/Text/Text'
 
 import cls from './ArticleList.module.scss'
 
-import { type Article, ArticleView } from '../../model/types/article'
+import { ArticleView } from '../../model/constants/articleConstants'
+import { Article } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 

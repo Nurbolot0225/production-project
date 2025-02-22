@@ -1,7 +1,12 @@
 import { memo, useCallback } from 'react'
 
-import { type ArticleSortField, ArticleTypeTabs, type ArticleView, ArticleViewSelector } from 'entities/Article'
-import { type ArticleType } from 'entities/Article/model/types/article'
+import {
+    type ArticleSortField,
+    ArticleType,
+    ArticleTypeTabs,
+    type ArticleView,
+    ArticleViewSelector
+} from 'entities/Article'
 import { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'

@@ -8,7 +8,7 @@ import { Icon } from 'shared/ui/Icon/Icon'
 
 import cls from './ArticleViewSelector.module.scss'
 
-import { ArticleView } from '../../model/types/article'
+import { ArticleView } from '../../model/constants/articleConstants'
 
 interface ArticleViewSelectorProps {
     className?: string

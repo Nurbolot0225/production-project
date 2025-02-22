@@ -13,7 +13,8 @@ import { Text } from 'shared/ui/Text/Text'
 
 import cls from './ArticleListItem.module.scss'
 
-import { type Article, ArticleBlockType, type ArticleTextBlock, ArticleView } from '../../model/types/article'
+import { ArticleBlockType, ArticleView } from '../../model/constants/articleConstants'
+import { Article, ArticleTextBlock } from '../../model/types/article'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 
 interface ArticleListItemProps {

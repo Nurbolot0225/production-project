@@ -16,13 +16,14 @@ import { Text, TextAlign, TextSize, TextTheme } from 'shared/ui/Text/Text'
 
 import cls from './ArticleDetails.module.scss'
 
+import { ArticleBlockType } from '../../model/constants/articleConstants'
 import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading
 } from '../../model/selectors/getArticleDetails'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
-import { type ArticleBlock, ArticleBlockType } from '../../model/types/article'
+import { type ArticleBlock } from '../../model/types/article'
 import { ArticleCodeBlockComponent } from '../ArticleICodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
