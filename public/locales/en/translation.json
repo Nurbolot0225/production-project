@@ -41,5 +41,6 @@
   "Ошибка при загрузка статей": "Error when uploading articles",
   "Forbidden": "You do not have access to this page",
   "adminPanelPage": "admin panel page",
-  "Не удалось загрузить уведомление": "Couldn't load notification"
+  "Не удалось загрузить уведомление": "Couldn't load notification",
+  "Ваш отзыв": "Your feedback"
 }

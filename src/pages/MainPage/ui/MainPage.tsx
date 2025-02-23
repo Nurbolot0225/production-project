@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
+import { RatingCard } from '@/entities/Rating'
 import { Page } from '@/widgets/Page/Page'
 
 const MainPage = () => {
@@ -8,6 +9,7 @@ const MainPage = () => {
     return (
         <Page>
             {t('Главная страница')}
+            <RatingCard />
         </Page>
     )
 }
