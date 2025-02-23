@@ -1,15 +1,15 @@
 import { memo } from 'react'
 
-import { NotificationItem } from 'entities/Notification/ui/NotificationItem/NotificationItem'
 import { useTranslation } from 'react-i18next'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
-import { VStack } from 'shared/ui/Stack'
-import { Text } from 'shared/ui/Text/Text'
 
 import cls from './NotificationList.module.scss'
 
 import { useNotifications } from '../../api/notificationApi'
+import { NotificationItem } from '@/entities/Notification/ui/NotificationItem/NotificationItem'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
+import { VStack } from '@/shared/ui/Stack'
+import { Text } from '@/shared/ui/Text/Text'
 
 interface NotificationListProps {
     className?: string

@@ -1,14 +1,15 @@
 import { memo, useCallback } from 'react'
 
-import { getArticleDetailsData } from 'entities/Article'
-import { getCanEditArticle } from 'pages/ArticleDetailsPage/model/selectors/article'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { RoutePath } from 'shared/config/routerConifg/routeConfig'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { HStack } from 'shared/ui/Stack'
+
+import { getArticleDetailsData } from '@/entities/Article'
+import { getCanEditArticle } from '@/pages/ArticleDetailsPage/model/selectors/article'
+import { RoutePath } from '@/shared/config/routerConifg/routeConfig'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { HStack } from '@/shared/ui/Stack'
 
 interface ArticlesDetailsPageHeaderProps {
     className?: string

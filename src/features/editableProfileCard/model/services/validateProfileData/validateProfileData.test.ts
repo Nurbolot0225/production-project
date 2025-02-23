@@ -1,9 +1,8 @@
-import { Country } from 'entities/Country'
-import { Currency } from 'entities/Currency'
-
 import { validateProfileData } from './validateProfileData'
 
 import { ValidateProfileError } from '../../constants/constants'
+import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
 
 const data = {
     first: 'Нурболот',

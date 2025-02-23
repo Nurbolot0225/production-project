@@ -1,6 +1,5 @@
-import { type Profile } from 'entities/Profile'
-
 import { ValidateProfileError } from '../../model/constants/constants'
+import { type Profile } from '@/entities/Profile'
 
 export interface ProfileSchema {
     data?: Profile

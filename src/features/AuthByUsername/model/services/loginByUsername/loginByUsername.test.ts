@@ -1,7 +1,7 @@
-import { userActions } from 'entities/User/model/slice/userSlice'
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
-
 import { loginByUsername } from './loginByUsername'
+
+import { userActions } from '@/entities/User/model/slice/userSlice'
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 
 describe('loginByUsername.test', () => {
     // let dispatch: Dispatch

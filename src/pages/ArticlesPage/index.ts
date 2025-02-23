@@ -4,4 +4,4 @@ export type {
 
 export {
     ArticlesPageAsync as ArticlePage
-} from 'pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.async'
+} from './ui/ArticlesPage/ArticlesPage.async'

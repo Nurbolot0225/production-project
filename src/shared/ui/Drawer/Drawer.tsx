@@ -5,14 +5,13 @@ import {
     useEffect
 } from 'react'
 
-import { useTheme } from 'app/providers/ThemeProvider'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { AnimationProvider, useAnimationLibs } from 'shared/lib/components/AminationProvider'
-
 import cls from './Drawer.module.scss'
 
 import { Overlay } from '../Overlay/Overlay'
 import { Portal } from '../Portal/Portal'
+import { useTheme } from '@/app/providers/ThemeProvider'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AminationProvider'
 
 interface DrawerProps {
     className?: string
@@ -32,8 +31,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
         className,
         children,
         onClose,
-        isOpen,
-        lazy
+        isOpen
     } = props
 
     const openDrawer = useCallback(() => {

@@ -1,10 +1,9 @@
-import { Country } from 'entities/Country'
-import { Currency } from 'entities/Currency'
-
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData'
 import { profileActions, profileReducer } from '../../model/slice/profileSlice'
 import { ValidateProfileError } from '../constants/constants'
 import { type ProfileSchema } from '../types/editableProfileCardSchema'
+import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
 
 const data = {
     first: 'Нурболот',

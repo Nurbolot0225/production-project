@@ -1,9 +1,6 @@
 import { Fragment, type ReactNode } from 'react'
 
 import { Listbox as HListBox } from '@headlessui/react'
-import CheckIcon from 'shared/assets/icons/check.svg'
-import { classNames, type Mods } from 'shared/lib/classNames/classNames'
-import { type DropdownDirection } from 'shared/types/ui'
 
 import cls from './ListBox.module.scss'
 
@@ -11,6 +8,9 @@ import { Button } from '../../../Button/Button'
 import { HStack } from '../../../Stack'
 import { mapDirectionClass } from '../../styles/constant'
 import popupCls from '../../styles/popup.module.scss'
+import CheckIcon from '@/shared/assets/icons/check.svg'
+import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
+import { type DropdownDirection } from '@/shared/types/ui'
 
 export interface ListBoxItem {
     value: string
