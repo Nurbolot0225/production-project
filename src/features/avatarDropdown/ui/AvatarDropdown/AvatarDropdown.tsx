@@ -9,8 +9,6 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Dropdown } from 'shared/ui/Popups'
 
-import cls from './AvatarDropdown.module.scss'
-
 interface avatarDropdownProps {
     className?: string
 }
@@ -25,11 +23,11 @@ export const AvatarDropdown = memo((props: avatarDropdownProps) => {
     const authData = useSelector(getUserAuthData)
     const isAdmin = useSelector(isUserAdmin)
     const isManager = useSelector(isUserManager)
+    const isAdminPanelAvailable = isAdmin || isManager
+
     const onLogout = useCallback(() => {
         dispatch(userActions.logout())
     }, [dispatch])
-
-    const isAdminPanelAvailable = isAdmin || isManager
 
     if (!authData) {
         return null
@@ -38,7 +36,7 @@ export const AvatarDropdown = memo((props: avatarDropdownProps) => {
     return (
         <Dropdown
             direction='bottom left'
-            className={classNames(cls.avatarDropdown, {}, [className])}
+            className={classNames('', {}, [className])}
             items={[
                 ...(isAdminPanelAvailable
                     ? [{

@@ -1,7 +1,6 @@
 import { type ReactNode } from 'react'
 
 import { Popover as HPopover } from '@headlessui/react'
-import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { mapDirectionClass } from 'shared/ui/Popups/styles/constant'
 
@@ -24,8 +23,6 @@ export const Popover = (props: PopoverProps) => {
         trigger,
         children
     } = props
-
-    const { t } = useTranslation()
 
     const menuClasses = [mapDirectionClass[direction]]
 

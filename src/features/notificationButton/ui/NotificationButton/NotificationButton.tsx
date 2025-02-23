@@ -1,10 +1,11 @@
-import { memo } from 'react'
+import { memo, useCallback, useState } from 'react'
 
 import { NotificationList } from 'entities/Notification'
-import { useTranslation } from 'react-i18next'
+import { BrowserView, MobileView } from 'react-device-detect'
 import NotificationIcon from 'shared/assets/icons/notification.svg'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Drawer } from 'shared/ui/Drawer/Drawer'
 import { Icon } from 'shared/ui/Icon/Icon'
 import { Popover } from 'shared/ui/Popups'
 
@@ -19,22 +20,45 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
         className
     } = props
 
-    const { t } = useTranslation()
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+
+    const onOpenDrawer = useCallback(() => {
+        setIsOpen(true)
+    }, [])
+
+    const onCloseDrawer = useCallback(() => {
+        setIsOpen(false)
+    }, [])
+
+    const trigger = (
+        <Button
+            onClick={onOpenDrawer}
+            theme={ButtonTheme.CLEAR}
+        >
+            <Icon
+                inverted
+                Svg={NotificationIcon}
+            />
+        </Button>
+    )
 
     return (
-        <Popover
-            direction='bottom left'
-            className={classNames('', {}, [className])}
-            trigger={(
-                <Button theme={ButtonTheme.CLEAR}>
-                    <Icon
-                        inverted
-                        Svg={NotificationIcon}
-                    />
-                </Button>
-            )}
-        >
-            <NotificationList className={cls.NotificationButton} />
-        </Popover>
+        <div>
+            <BrowserView>
+                <Popover
+                    direction='bottom left'
+                    className={classNames('', {}, [className])}
+                    trigger={trigger}
+                >
+                    <NotificationList className={cls.NotificationButton} />
+                </Popover>
+            </BrowserView>
+            <MobileView>
+                {trigger}
+                <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+                    <NotificationList className={cls.NotificationButton} />
+                </Drawer>
+            </MobileView>
+        </div>
     )
 })
