@@ -3,7 +3,6 @@ import { memo, useCallback, useState } from 'react'
 import { BrowserView, MobileView } from 'react-device-detect'
 import { useTranslation } from 'react-i18next'
 
-import { classNames } from '@/shared/lib/classNames/classNames'
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button'
 import { Card } from '@/shared/ui/Card/Card'
 import { Drawer } from '@/shared/ui/Drawer/Drawer'
@@ -18,6 +17,7 @@ interface RatingCardProps {
     title?: string
     feedbackTitle?: string
     hasFeedback?: boolean
+    rate?: number
     onCancel?: (starsCount: number) => void
     onAccept?: (starsCount: number, feedback?: string) => void
 }
@@ -28,13 +28,14 @@ export const RatingCard = memo((props: RatingCardProps) => {
         title,
         feedbackTitle,
         hasFeedback,
+        rate = 0,
         onCancel,
         onAccept
     } = props
 
-    const { t } = useTranslation()
+    const { t } = useTranslation('article-details')
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
-    const [startsCount, setStarsCount] = useState<number>(0)
+    const [startsCount, setStarsCount] = useState<number>(rate)
     const [feedback, setFeedback] = useState<string>('')
 
     const onSelectStars = useCallback((selectedStarsCount: number) => {
@@ -49,7 +50,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const acceptHandler = useCallback(() => {
         setIsModalOpen(false)
         onAccept?.(startsCount, feedback)
-    }, [hasFeedback, onAccept, startsCount])
+    }, [feedback, onAccept, startsCount])
 
     const cancelHandler = useCallback(() => {
         setIsModalOpen(false)
@@ -62,6 +63,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 title={feedbackTitle}
             />
             <Input
+                autofocus
                 value={feedback}
                 onChange={setFeedback}
                 placeholder={t('Ваш отзыв')}
@@ -70,15 +72,16 @@ export const RatingCard = memo((props: RatingCardProps) => {
     )
 
     return (
-        <Card className={classNames('', {}, [className])}>
+        <Card max className={className}>
             <VStack
                 align='center'
                 gap='8'
             >
                 <Text
-                    title={title}
+                    title={startsCount ? t('Спасибо за оценку') : title}
                 />
                 <StarRating
+                    selectedStars={startsCount}
                     size={40}
                     onSelect={onSelectStars}
                 />

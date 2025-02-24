@@ -953,5 +953,42 @@
       "username": "ulbi tv",
       "avatar": "https://distribution.faceit-cdn.net/images/08bd0dbe-2f12-4412-93db-53cbfc5a4377.jpeg"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 5,
+      "feedback": "Хорощая статья и хороший язык",
+      "id": "wdFIJB6"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "feedback": "Go топ 🔥🔥🔥🔥🔥",
+      "id": "O-2fz7K"
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 5,
+      "feedback": "Java Top Language",
+      "id": "wx1A2Hq"
+    }
   ]
 }
