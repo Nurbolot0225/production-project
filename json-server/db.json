@@ -887,6 +887,12 @@
       "userId": "2",
       "text": "Hello",
       "id": "DXJEWfg"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "Typescript",
+      "id": "RhetfLT"
     }
   ],
   "users": [
@@ -1003,6 +1009,20 @@
       "rate": 5,
       "feedback": "JavaScript Top 🔥<script>JAVASCRIPT</script>>",
       "id": "h2pJrNn"
+    },
+    {
+      "userId": "1",
+      "articleId": "8",
+      "rate": 5,
+      "feedback": "TypeScript Top Language",
+      "id": "laMjZJm"
+    },
+    {
+      "userId": "1",
+      "articleId": "12",
+      "rate": 5,
+      "feedback": "",
+      "id": "5MpAOgt"
     }
   ]
 }

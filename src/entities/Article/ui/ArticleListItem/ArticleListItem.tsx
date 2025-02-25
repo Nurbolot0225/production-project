@@ -8,7 +8,7 @@ import { ArticleBlockType, ArticleView } from '../../model/constants/articleCons
 import { Article, ArticleTextBlock } from '../../model/types/article'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import EyeIcon from '@/shared/assets/icons/eye.svg'
-import { RoutePath } from '@/shared/config/routerConifg/routeConfig'
+import { RoutePath } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
 import { Avatar } from '@/shared/ui/Avatar/Avatar'

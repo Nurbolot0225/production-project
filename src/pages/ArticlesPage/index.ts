@@ -3,5 +3,5 @@ export type {
 } from './model/types/articlesPageSchema'
 
 export {
-    ArticlesPageAsync as ArticlePage
+    ArticlesPageAsync as ArticlesPage
 } from './ui/ArticlesPage/ArticlesPage.async'
