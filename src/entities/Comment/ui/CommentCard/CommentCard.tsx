@@ -2,7 +2,7 @@ import { memo } from 'react'
 
 import cls from './CommentCard.module.scss'
 
-import { type Comment } from '@/entities/Comment'
+import { type Comment } from '../..'
 import { RoutePath } from '@/shared/config/routerConifg/routeConfig'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'

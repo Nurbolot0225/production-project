@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux'
 import cls from './Sidebar.module.scss'
 
 import { getSidebarItems } from '../../model/selectors/getSidebarItems/getSideBarItems'
+import { SidebarItem } from '../SidebarItem/SidebarItem'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button'
-import { LangSwitcher } from '@/shared/ui/LangSwitcher/LangSwitcher'
 import { VStack } from '@/shared/ui/Stack'
-import { SidebarItem } from '@/widgets/Sidebar/ui/SidebarItem/SidebarItem'
+import { LangSwitcher } from '@/widgets/LangSwitcher'
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher'
 
 interface SidebarProps {

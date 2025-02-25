@@ -2,8 +2,8 @@ import { memo } from 'react'
 
 import cls from './Text.module.scss'
 
+import { AppLinkTheme } from '../AppLink/AppLink'
 import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
-import { AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
 
 export enum TextTheme {
     PRIMARY = 'primary',

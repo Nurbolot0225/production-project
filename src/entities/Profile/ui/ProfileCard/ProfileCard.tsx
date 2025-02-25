@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next'
 
 import cls from './ProfileCard.module.scss'
 
+import { type Profile } from '../..'
 import { CountrySelect } from '@/entities/Country'
-import { type Country } from '@/entities/Country/model/types/country'
+import { type Country } from '@/entities/Country'
 import { type Currency, CurrencySelect } from '@/entities/Currency'
-import { type Profile } from '@/entities/Profile'
 import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
 import { Avatar } from '@/shared/ui/Avatar/Avatar'
 import { Input } from '@/shared/ui/Input/Input'

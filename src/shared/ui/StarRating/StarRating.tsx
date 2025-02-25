@@ -4,8 +4,8 @@ import StarIcon from 'shared/assets/icons/star.svg'
 
 import cls from './StarRating.module.scss'
 
+import { Icon } from '../Icon/Icon'
 import { classNames, Mods } from '@/shared/lib/classNames/classNames'
-import { Icon } from '@/shared/ui/Icon/Icon'
 
 interface StarRatingProps {
     className?: string

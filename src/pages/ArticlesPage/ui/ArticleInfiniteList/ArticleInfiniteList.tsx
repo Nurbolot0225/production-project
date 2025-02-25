@@ -11,7 +11,7 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 import { getArticles } from '../../model/slices/articlesPageSlice'
-import { ArticleList } from '@/entities/Article/ui/ArticleList/ArticleList'
+import { ArticleList } from '@/entities/Article'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'

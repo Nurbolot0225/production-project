@@ -11,12 +11,12 @@ import {
     getArticleDetailsError,
     getArticleDetailsIsLoading
 } from '../../model/selectors/getArticleDetails'
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { type ArticleBlock } from '../../model/types/article'
 import { ArticleCodeBlockComponent } from '../ArticleICodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-import { fetchArticleById } from '@/entities/Article/model/services/fetchArticleById/fetchArticleById'
 import CalendarIcon from '@/shared/assets/icons/calendar.svg'
 import EyeIcon from '@/shared/assets/icons/eye.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'

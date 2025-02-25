@@ -2,8 +2,8 @@ import { memo } from 'react'
 
 import { useTranslation } from 'react-i18next'
 
+import { type Comment } from '../..'
 import { CommentCard } from '../CommentCard/CommentCard'
-import { type Comment } from '@/entities/Comment'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { VStack } from '@/shared/ui/Stack'
 import { Text } from '@/shared/ui/Text/Text'

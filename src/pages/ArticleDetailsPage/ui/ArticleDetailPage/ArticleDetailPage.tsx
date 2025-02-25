@@ -14,7 +14,7 @@ import { ArticleRecommendationsList } from '@/features/articleRecommendationsLis
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { VStack } from '@/shared/ui/Stack'
-import { Page } from '@/widgets/Page/Page'
+import { Page } from '@/widgets/Page'
 
 interface ArticleDetailsPageProps {
     className?: string

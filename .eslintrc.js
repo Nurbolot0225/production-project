@@ -40,7 +40,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'nurbolot-plugin'
+        'ulbi-tv-plugin'
     ],
     rules: {
         'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
@@ -109,7 +109,8 @@ module.exports = {
         '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-invalid-void-type': 'off',
         '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
-        'nurbolot-plugin/path-checker': 'error',
+        'ulbi-tv-plugin/path-checker': ['error', { alias: '@' }],
+        'ulbi-tv-plugin/public-api-imports': ['error', { alias: '@' }],
         '@typescript-eslint/no-unused-vars': [
             'error',
             {

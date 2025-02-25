@@ -21,7 +21,7 @@ import {
     type ArticleView,
     ArticleViewSelector
 } from '@/entities/Article'
-import { ArticleSortSelector } from '@/entities/Article/ui/ArticleSortSelector/ArticleSortSelector'
+import { ArticleSortSelector } from '@/entities/Article'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
