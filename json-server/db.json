@@ -893,6 +893,12 @@
       "userId": "1",
       "text": "Typescript",
       "id": "RhetfLT"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "text": "🇰🇬",
+      "id": "umXScZr"
     }
   ],
   "users": [
@@ -1023,6 +1029,13 @@
       "rate": 5,
       "feedback": "",
       "id": "5MpAOgt"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 5,
+      "feedback": "🇰🇬",
+      "id": "DQjZ3YK"
     }
   ]
 }

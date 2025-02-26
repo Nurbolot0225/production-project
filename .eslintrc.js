@@ -111,6 +111,13 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
         'ulbi-tv-plugin/path-checker': ['error', { alias: '@' }],
         'ulbi-tv-plugin/public-api-imports': ['error', { alias: '@' }],
+        'ulbi-tv-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider']
+            }
+        ],
         '@typescript-eslint/no-unused-vars': [
             'error',
             {
