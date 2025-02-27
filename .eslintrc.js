@@ -40,7 +40,8 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'ulbi-tv-plugin'
+        'ulbi-tv-plugin',
+        'unused-imports'
     ],
     rules: {
         'sort-imports': ['error', { ignoreCase: true, ignoreDeclarationSort: true }],
@@ -71,6 +72,7 @@ module.exports = {
         ],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
+        'unused-imports/no-unused-imports': 'error',
         indent: [2, 4],
         'max-len': [
             'error',
