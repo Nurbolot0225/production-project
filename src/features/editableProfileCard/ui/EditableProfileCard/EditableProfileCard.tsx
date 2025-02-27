@@ -20,7 +20,7 @@ import { DynamicModuleLoader, type ReducersList } from '@/shared/lib/components/
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { VStack } from '@/shared/ui/Stack'
-import { Text, TextTheme } from '@/shared/ui/Text/Text'
+import { Text, TextTheme } from '@/shared/ui/Text'
 
 interface EditableProfileCardProps {
     className?: string

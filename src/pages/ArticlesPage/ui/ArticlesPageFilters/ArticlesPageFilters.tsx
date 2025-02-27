@@ -26,8 +26,8 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
 import { type SortOrder } from '@/shared/types'
-import { Card } from '@/shared/ui/Card/Card'
-import { Input } from '@/shared/ui/Input/Input'
+import { Card } from '@/shared/ui/Card'
+import { Input } from '@/shared/ui/Input'
 
 interface ArticlesPageFiltersProps {
     className?: string

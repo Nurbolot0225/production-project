@@ -7,11 +7,11 @@ import { CountrySelect } from '@/entities/Country'
 import { type Country } from '@/entities/Country'
 import { type Currency, CurrencySelect } from '@/entities/Currency'
 import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
-import { Avatar } from '@/shared/ui/Avatar/Avatar'
-import { Input } from '@/shared/ui/Input/Input'
-import { Loader } from '@/shared/ui/loader/Loader'
+import { Avatar } from '@/shared/ui/Avatar'
+import { Input } from '@/shared/ui/Input'
+import { Loader } from '@/shared/ui/loader'
 import { HStack, VStack } from '@/shared/ui/Stack'
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text/Text'
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text'
 
 interface ProfileCardProps {
     className?: string

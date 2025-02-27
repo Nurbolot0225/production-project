@@ -4,8 +4,8 @@ import cls from './NotificationItem.module.scss'
 
 import { Notification } from '../../modal/types/notification'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Card, CardTheme } from '@/shared/ui/Card/Card'
-import { Text } from '@/shared/ui/Text/Text'
+import { Card, CardTheme } from '@/shared/ui/Card'
+import { Text } from '@/shared/ui/Text'
 
 interface NotificationItemProps {
     className?: string
