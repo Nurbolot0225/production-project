@@ -1,5 +1,12 @@
 import { type MutableRefObject, useCallback, useEffect, useRef, useState } from 'react'
 
+/**
+ * Переиспользуемый хук для модальных компонентов (drawer/modal)
+ * @param animationDelay
+ * @param isOpen
+ * @param onClose
+ */
+
 interface ModalProps {
     onClose?: () => void
     isOpen?: boolean
