@@ -899,6 +899,24 @@
       "userId": "1",
       "text": "🇰🇬",
       "id": "umXScZr"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "😈",
+      "id": "7aSgb7j"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "🦦",
+      "id": "nLLxG0Y"
+    },
+    {
+      "articleId": "4",
+      "userId": "2",
+      "text": "копирка 🦇",
+      "id": "Bl8bMSm"
     }
   ],
   "users": [
@@ -929,6 +947,15 @@
         "USER"
       ],
       "avatar": "https://distribution.faceit-cdn.net/images/08bd0dbe-2f12-4412-93db-53cbfc5a4377.jpeg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwnhRM6slmvEjhzPCiBD55KfT29DugstSh6OrS6XT=s900-c-k-c0x00ffffff-no-rj"
     }
   ],
   "profile": [
@@ -964,6 +991,17 @@
       "city": "Moscow",
       "username": "ulbi tv",
       "avatar": "https://distribution.faceit-cdn.net/images/08bd0dbe-2f12-4412-93db-53cbfc5a4377.jpeg"
+    },
+    {
+      "id": "4",
+      "first": "Cypress",
+      "lastname": "Test",
+      "age": 24,
+      "currency": "KGZ",
+      "country": "Kyrgyzstan",
+      "city": "Bishkek",
+      "username": "cypress",
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwnhRM6slmvEjhzPCiBD55KfT29DugstSh6OrS6XT=s900-c-k-c0x00ffffff-no-rj"
     }
   ],
   "article-ratings": [
