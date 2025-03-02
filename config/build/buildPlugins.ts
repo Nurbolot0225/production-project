@@ -46,15 +46,15 @@ export function buildPlugins ({ paths, isDev, apiUrl, project }: BuildOptions): 
     }
 
     if (isProd) {
-        new MiniCssExtractPlugin({
+        plugins.push(new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css'
-        })
-        new CopyPlugin({
+        }))
+        plugins.push(new CopyPlugin({
             patterns: [
                 { from: paths.locales, to: paths.buildLocales }
             ]
-        })
+        }))
     }
 
     return plugins
