@@ -27,17 +27,16 @@
 #        if: always()
 #      - name: linting css
 #        run: npm run lint:scss
-#        if: always()
 #      - name: unit testing
-#        run: npm run test:unit
 #        if: always()
+#        run: npm run test:unit
 
 name: linting, testing, building
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 permissions:
   contents: write
   pages: write
